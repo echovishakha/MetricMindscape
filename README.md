@@ -1,5 +1,8 @@
 # KPI Audit Tool
 
+## Live Demo
+Access the live application: [KPI Audit Tool](https://metric-mindscape-echovishakha.replit.app/)
+
 ## Overview
 The KPI Audit Tool is an AI-powered application that helps businesses identify which metrics truly matter for business outcomes and which ones are creating unnecessary noise. It analyzes your current KPIs, detects redundancies, and recommends the most impactful metrics for your organization.
 
