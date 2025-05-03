@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KPI Audit Tool - Identify Metrics That Matter</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        h1 {
+            color: #2c3e50;
+        }
+        .tagline {
+            font-size: 1.2em;
+            color: #7f8c8d;
+        }
+        .feature-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin: 30px 0;
+        }
+        .feature {
+            flex: 1 1 300px;
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .feature h3 {
+            color: #16a085;
+            margin-top: 0;
+        }
+        .screenshot {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+            margin: 30px 0;
+        }
+        .cta {
+            text-align: center;
+            margin: 40px 0;
+        }
+        .button {
+            display: inline-block;
+            background-color: #2980b9;
+            color: white;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        .button:hover {
+            background-color: #3498db;
+        }
+        footer {
+            margin-top: 50px;
+            text-align: center;
+            color: #7f8c8d;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>🔍 KPI Audit Tool</h1>
+        <p class="tagline">Identify redundant metrics and focus on what really matters for business outcomes</p>
+    </header>
+
+    <main>
+        <p>
+            One sales org optimized for "calls made per day" where reps simply called voicemails to hit numbers.
+            A design team hit 100% "feedback resolution rate" by auto-responding "thanks!" 
+            Your dashboard tracks 27 KPIs, but only two actually matter. The rest? Noise.
+        </p>
+
+        <p>
+            The KPI Audit Tool is an AI-powered application that helps you identify which metrics genuinely drive business outcomes
+            and which ones might be creating unnecessary noise or misleading your team.
+        </p>
+
+        <div class="feature-list">
+            <div class="feature">
+                <h3>✅ Impact Score Analysis</h3>
+                <p>The tool calculates an impact score for each metric based on multiple factors including usage in decision making, 
+                   review frequency, executive interest, and business alignment.</p>
+            </div>
+            <div class="feature">
+                <h3>✅ Redundancy Detection</h3>
+                <p>Automatically identifies metrics that overlap or duplicate information across departments, 
+                   helping you consolidate and streamline your metrics dashboard.</p>
+            </div>
+            <div class="feature">
+                <h3>✅ Smart Recommendations</h3>
+                <p>Provides AI-generated recommendations on which metrics to keep, modify, or eliminate based on 
+                   a comprehensive analysis of your entire metrics ecosystem.</p>
+            </div>
+        </div>
+
+        <h2>How It Works</h2>
+        <p>
+            1. Upload your metrics data in CSV format<br>
+            2. The AI analyzes each metric for impact and redundancy<br>
+            3. Review visual dashboards highlighting key insights<br>
+            4. Get specific recommendations on metrics to focus on<br>
+            5. Export the analysis to Excel for further review
+        </p>
+
+        <div class="cta">
+            <a href="https://replit.com/@USERNAME/kpi-audit-tool" class="button">Try the KPI Audit Tool</a>
+        </div>
+
+        <h2>Technical Features</h2>
+        <ul>
+            <li>Built with Streamlit, Python, Pandas, and Plotly</li>
+            <li>Advanced metric scoring algorithm based on multiple factors</li>
+            <li>Interactive visualizations for better insight discovery</li>
+            <li>Detailed filtering capabilities for department-specific analysis</li>
+            <li>Excel export functionality for offline review</li>
+        </ul>
+    </main>
+
+    <footer>
+        <p>© 2025 KPI Audit Tool | Powered by Replit</p>
+    </footer>
+</body>
+</html>
