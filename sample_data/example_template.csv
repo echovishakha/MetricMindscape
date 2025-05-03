@@ -1,0 +1,6 @@
+Department,Metric_Name,Visible_in_Dashboard,Used_in_Decision_Making,Executive_Requested,Last_Reviewed,Metric_Last_Used_For_Decision,Interpretation_Notes
+Sales,Revenue Growth,Yes,Yes,Yes,This week,Recently,Tied to real goals
+Marketing,Email Open Rate,Yes,No,No,Last month,Never,Often misinterpreted
+Finance,Customer Acquisition Cost,Yes,Yes,No,Last quarter,Recently,Tied to real goals
+Product,Feature Usage,No,Yes,No,Last month,2 weeks ago,Auto-synced from tool
+Support,Ticket Resolution Time,Yes,No,No,Unknown,Last quarter,Updated manually

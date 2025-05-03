@@ -33,32 +33,66 @@ def main():
     Upload your KPI data to analyze which metrics are truly valuable and which ones might be creating noise.
     """)
     
-    # File uploader
-    uploaded_file = st.file_uploader("Upload your metrics CSV file", type=["csv"])
+    # File uploader with clear instructions
+    st.markdown("""
+    ### Upload Your Data
+    Upload a CSV file with your metrics data, or use our sample data to explore the tool's capabilities.
+    """)
     
-    use_sample = st.checkbox("Use sample data instead")
+    col1, col2 = st.columns([3, 1])
+    
+    with col1:
+        uploaded_file = st.file_uploader("Upload your metrics CSV file", type=["csv"], 
+                                        help="Make sure your CSV has the required columns")
+    
+    with col2:
+        use_sample = st.checkbox("Use sample data instead", value=False,
+                                help="Try the tool with our sample metrics data")
+    
+    # Create buffer space
+    st.markdown("---")
     
     if uploaded_file is not None:
-        df = pd.read_csv(uploaded_file)
-        analyze_data(df)
+        try:
+            df = pd.read_csv(uploaded_file)
+            st.success("File uploaded successfully!")
+            analyze_data(df)
+        except Exception as e:
+            st.error(f"Error reading the CSV file: {e}")
+            st.info("Please make sure your CSV file is properly formatted.")
     elif use_sample:
         st.info("Using sample data from the provided Vanity Metrics dashboard.")
         df = load_sample_data()
         analyze_data(df)
     else:
         st.info("Please upload a CSV file with your metrics data or use our sample data.")
-        st.markdown("""
-        ### Expected CSV format:
-        Your CSV should include the following columns:
-        - Department
-        - Metric_Name
-        - Visible_in_Dashboard
-        - Used_in_Decision_Making
-        - Executive_Requested
-        - Last_Reviewed
-        - Metric_Last_Used_For_Decision
-        - Interpretation_Notes
-        """)
+        
+        col1, col2 = st.columns([3, 1])
+        
+        with col1:
+            st.markdown("""
+            ### Expected CSV format:
+            Your CSV should include the following columns:
+            - Department
+            - Metric_Name
+            - Visible_in_Dashboard (Yes/No)
+            - Used_in_Decision_Making (Yes/No)
+            - Executive_Requested (Yes/No)
+            - Last_Reviewed (This week/Last month/Last quarter/Unknown)
+            - Metric_Last_Used_For_Decision (Recently/2 weeks ago/Last quarter/etc.)
+            - Interpretation_Notes (Text describing metric quality)
+            """)
+        
+        with col2:
+            st.markdown("### Need a template?")
+            
+            # Provide a downloadable template
+            with open("sample_data/example_template.csv", "r") as file:
+                template_content = file.read()
+                
+            template_b64 = base64.b64encode(template_content.encode()).decode()
+            template_href = f'<a href="data:text/csv;base64,{template_b64}" download="kpi_metrics_template.csv">Download CSV template</a>'
+            st.markdown(template_href, unsafe_allow_html=True)
 
 def analyze_data(df):
     st.subheader("Data Overview")
