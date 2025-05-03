@@ -55,9 +55,12 @@ Your CSV should include the following columns:
 - Visible_in_Dashboard (Yes/No)
 - Used_in_Decision_Making (Yes/No)
 - Executive_Requested (Yes/No)
-- Last_Reviewed
-- Metric_Last_Used_For_Decision
-- Interpretation_Notes
+- Last_Reviewed (This week/Last month/Last quarter/Unknown)
+- Metric_Last_Used_For_Decision (Recently/2 weeks ago/Last quarter/Never/Don't know/Used in QBR)
+- Interpretation_Notes (Text describing metric quality, such as "Tied to real goals", "Auto-synced from tool", etc.)
+
+### Template Available
+The tool includes a downloadable CSV template that you can use as a starting point for your own metrics data.
 
 ## Development
 
